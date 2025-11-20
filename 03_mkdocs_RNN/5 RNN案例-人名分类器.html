@@ -1873,7 +1873,7 @@ y.shape torch.Size([1]) tensor([15])
         <span class="c1"># 数据形状 [6,57] -&gt; [6,1,57]</span>
         <span class="nb">input</span> <span class="o">=</span> <span class="nb">input</span><span class="o">.</span><span class="n">unsqueeze</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
         <span class="c1"># 1 数据经过模型 提取事物特征</span>
-        <span class="c1"># 数据形状 [seqlen,1,57],[1,1,128]) -&gt; [seqlen,1,18],[1,1,128]</span>
+        <span class="c1"># 数据形状 [seqlen,1,57],[1,1,128]) -&gt; [seqlen,1,128],[1,1,128]</span>
         <span class="n">rr</span><span class="p">,</span> <span class="n">hn</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">rnn</span><span class="p">(</span><span class="nb">input</span><span class="p">,</span> <span class="n">hidden</span><span class="p">)</span>
 
         <span class="c1"># 数据形状 [seqlen,1,128] - [1, 128]  eg:[6,1,128] --&gt; [1,128]</span>
